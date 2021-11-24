@@ -7,8 +7,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Klee One", cursive;
-  font-family: "Patrick Hand SC", cursive;
+  /* font-family: "Klee One", cursive;
+  font-family: "Patrick Hand SC", cursive; */
 }
 input {
   display: flex;
@@ -25,5 +25,4 @@ button {
   font-family: "Patrick Hand SC", cursive;
   border: none;
   border-radius: 10px;
-  background-color: rgb(250, 248, 128);
 }

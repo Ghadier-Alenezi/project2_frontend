@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./style.css";
 import { Link } from "react-router-dom";
@@ -8,22 +8,18 @@ const User = () => {
   const [formAge, setFormAge] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formPassword, setformPassword] = useState("");
-  const [formPasswordVerify, setformPasswordVerify] = useState("");
 
-  async function signUp(e) {
-    // to prevent reload the page
-    e.prventDefault();
-
+  function signUp(e) {
+    e.preventDefault();
     const signUpData = {
       name: formName,
-      age: formAge,
       email: formEmail,
       password: formPassword,
-      passwordVerify: formPasswordVerify,
+      age: formAge,
     };
-    await axios.post(
-     "" // link
-      ,signUpData);
+    axios
+      .post(`http://localhost:4000/user/newUser`, signUpData)
+      .then((res) => console.log(res));
   }
 
   return (
@@ -63,14 +59,6 @@ const User = () => {
               placeholder="password"
               value={formPassword}
               onChange={(e) => setformPassword(e.target.value)}
-            />
-            <label htmlFor="form-passwordVerify">Verify Password</label>
-            <input
-              id="form-passwordVerify"
-              type="password"
-              placeholder="password"
-              value={formPasswordVerify}
-              onChange={(e) => setformPasswordVerify(e.target.value)}
             />
             <button type="submit">sign up</button>
           </form>

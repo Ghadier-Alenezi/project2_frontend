@@ -8,6 +8,7 @@ import Lesson from "./components/Lesson";
 // import Footer from "./components/Footer";
 import Songs from "./components/Songs";
 import Jokes from "./components/Jokes";
+import Login from "./components/Login";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/lesson" element={<Lesson />} />
         <Route exact path="/user" element={<User />} />
+        <Route exact path="/login" element={<Login />} />
         <Route exact path="/songs" element={<Songs />} />
         <Route exact path="/jokes" element={<Jokes />} />
 
