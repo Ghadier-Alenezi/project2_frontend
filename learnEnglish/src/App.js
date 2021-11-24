@@ -1,23 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import User from "./components/User";
 import Nav from "./components/Nav";
-// import Jokes from "./components/Jokes";
 import LandingPage from "./components/LandingPage";
+import Lesson from "./components/Lesson";
+// import Jokes from "./components/Jokes";
 // import Footer from "./components/Footer";
-import axios from "axios";
+import Songs from "./components/Songs";
+import Jokes from "./components/Jokes";
 
 function App() {
 
   
   return (
     <>
-      <h1>Learn English</h1>
       <Nav />
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
-        <Route exact path="/lesson" element={<LandingPage />} />
+        <Route exact path="/lesson" element={<Lesson />} />
         <Route exact path="/user" element={<User />} />
+        <Route exact path="/songs" element={<Songs />} />
+        <Route exact path="/jokes" element={<Jokes />} />
+
       </Routes>
       {/* <Footer /> */}
     </>

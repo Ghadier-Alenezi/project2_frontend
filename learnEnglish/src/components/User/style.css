@@ -10,7 +10,7 @@
   font-family: "Klee One", cursive;
   font-family: "Patrick Hand SC", cursive;
 }
-input{
+input {
   display: flex;
   /* width: 100vh;
   height: 100vh; */
@@ -20,7 +20,7 @@ input{
   border: 1px solid gray;
   border-radius: 5px;
 }
-button{
+button {
   font-family: "Klee One", cursive;
   font-family: "Patrick Hand SC", cursive;
   border: none;

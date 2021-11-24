@@ -4,7 +4,7 @@ import "./style.css";
 const LandingPage = () => {
   return (
     <div className="wrapper">
-      <h2>LandingPage</h2>
+      <h2>Home</h2>
     </div>
   );
 };
