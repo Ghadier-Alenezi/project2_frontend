@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./style.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
+import { useForm } from "react-hook-form";
 
-const User = () => {
+import "./style.css";
+
+const Update = () => {
   const [formName, setFormName] = useState("");
   const [formAge, setFormAge] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formPassword, setformPassword] = useState("");
 
-  function signUp(e) {
+  async function signUp(e) {
     e.preventDefault();
     const signUpData = {
       name: formName,
@@ -17,14 +20,14 @@ const User = () => {
       password: formPassword,
       age: formAge,
     };
-    axios
+    if(formName.length >0 )
+   await axios
       .post(`http://localhost:4000/user/newUser`, signUpData)
       .then((res) => console.log(res));
   }
 
   return (
-    <>
-      <div className="wrapper">
+      <div className="auth-form">
         <h3>Join Us</h3>
         <div className="inputs">
           <form onSubmit={signUp}>
@@ -33,6 +36,7 @@ const User = () => {
               id="form-name"
               type="name"
               placeholder="name"
+              className="input"
               value={formName}
               onChange={(e) => setFormName(e.target.value)}
             />
@@ -41,6 +45,8 @@ const User = () => {
               id="form-age"
               type="age"
               placeholder="age"
+              className="input"
+
               value={formAge}
               onChange={(e) => setFormAge(e.target.value)}
             />
@@ -49,6 +55,8 @@ const User = () => {
               id="form-email"
               type="email"
               placeholder="email"
+              className="input"
+
               value={formEmail}
               onChange={(e) => setFormEmail(e.target.value)}
             />
@@ -57,21 +65,16 @@ const User = () => {
               id="form-password"
               type="password"
               placeholder="password"
+              className="input"
+
               value={formPassword}
               onChange={(e) => setformPassword(e.target.value)}
             />
             <button type="submit">sign up</button>
           </form>
         </div>
-
-        <div className="gap"></div>
-        <h3>
-          already have an account?
-          <Link to="/login">Login</Link>
-        </h3>
-      </div>
-    </>
+        </div>
   );
 };
 
-export default User;
+export default Update;
