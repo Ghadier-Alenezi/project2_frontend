@@ -24,7 +24,7 @@ const Login = () => {
       password: formPassword,
     };
     try {
-      const res = await axios.post(`http://localhost:4000/user/login`, loginData);
+      const res = await axios.post(`https://project2-learn.herokuapp.com/user/login`, loginData);
       console.log( res.data.existUser);
       localStorage.setItem("user", JSON.stringify({ user: res.data.existUser }));
     } catch (error) {
