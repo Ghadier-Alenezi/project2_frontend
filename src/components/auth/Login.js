@@ -37,10 +37,13 @@ const Login = () => {
     navigate("/home");
   }
 
+  const toRegister= ()=>{
+    navigate("/register");
+  }
   return (
     <>
       <div className="auth-form">
-        <p>Log In</p>
+        <p className="profileP">Log In</p>
         <div className="inputs">
           <form className="form" onSubmit={login}>
             <label htmlFor="form-email">Email</label>
@@ -65,12 +68,13 @@ const Login = () => {
               Log In
             </button>
           </form>
+
+   
+          You don't have an account yet?
+          <button className="btn-submit" onClick={toRegister}>Sign Up Here</button>
+      
         </div>
 
-        <p>
-          You don't have an account yet?
-          <Link to="/register">Sign Up Here</Link>
-        </p>
       </div>
     </>
   );

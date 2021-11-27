@@ -3,6 +3,7 @@ import Nav from "../Nav";
 import Logo from "../Home/logoLearn.jpeg";
 import { useNavigate } from "react-router";
 import Footer from "../Footer";
+import "./style.css";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Home = () => {
     <div className="mainBody">
       <div className="logo">
         {" "}
-        <img src={Logo} width="170" alt="logo" onClick={toHome} />
+        <img src={Logo} width="150" alt="logo" onClick={toHome} />
       </div>
       <Nav className="footer" />
       {/* <div>

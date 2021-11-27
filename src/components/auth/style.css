@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Patrick Hand', cursive;
+}
 .auth-form {
   /* position: relative; */
   width: 40%;
@@ -49,4 +56,17 @@
 .social:hover{
   cursor: pointer;
 
+}
+.form{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.profileP {
+  margin: 0.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(83, 83, 83);
 }

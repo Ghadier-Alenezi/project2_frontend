@@ -38,7 +38,7 @@ const Lesson = () => {
   return (
     <div>
       <Posts postsToRender={postsToShow} />
-      <h3>{postsToShow}</h3>
+      <h3 className="profileP">{postsToShow}</h3>
       <button onClick={handleShowMorePosts}>Load more</button>
     </div>
   );

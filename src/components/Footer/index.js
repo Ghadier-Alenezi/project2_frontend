@@ -15,7 +15,7 @@ const Footer = () => {
         {" "}
         <p>
           <BiCopyright />
-          2021 Learn English. Tuwaiq Bootcamp - Qassim
+          2021 - Learn English. Tuwaiq Bootcamp
           </p>
       </div>
       <div>

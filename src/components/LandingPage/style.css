@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Alice&family=Fredoka+One&family=Handlee&family=Klee+One:wght@600&family=M+PLUS+Rounded+1c&family=Mitr:wght@300&family=Patrick+Hand+SC&display=swap");
+
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
 }
 .text-link {
   color: inherit;

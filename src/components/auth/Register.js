@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Logo from "../LandingPage/logoLearn.jpeg";
+
 import "./style.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
@@ -39,11 +41,17 @@ const User = () => {
       console.log(error);
     }
   }
-
+const toLanding =()=>{
+  navigate("/");
+}
   return (
     <>
       <div className="auth-form">
-        <p>Join Us</p>
+      <div className="logo">
+          {" "}
+          <img src={Logo} width="200" alt="logo"/>
+        </div>
+        <p className="profileP">Join Us</p>
         <div className="inputs">
           <form onSubmit={signUp}>
             <label htmlFor="form-name">Name</label>
@@ -84,12 +92,11 @@ const User = () => {
             />
             <button type="submit">sign up</button>
           </form>
+          already have an account?
+          <button className="btn-submit" onClick={toLanding}>Login</button>
         </div>
 
-        <p>
-          already have an account?
-          <Link to="/login">Login</Link>
-        </p>
+        
       </div>
     </>
   );
