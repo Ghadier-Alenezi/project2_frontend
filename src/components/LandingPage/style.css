@@ -4,43 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-#root {
-  text-align: center;
-  align-items: center;
-  width: 100vw;
-  min-height: 100vh;
-  position: relative;
-  /* background-image: url(https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
-  background-repeat: no-repeat;
-  background-size: cover; */
-  font-family: "Alice", serif;
-  font-family: "Fredoka One", cursive;
-  font-family: "Handlee", cursive;
-  font-family: "Klee One", cursive;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-family: "Mitr", sans-serif;
-  font-family: "Patrick Hand SC", cursive;
-}
-.wrapper {
-  display: flex;
-  width: 100vh;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
 .text-link {
   color: inherit;
   text-decoration: inherit;
 }
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-content: space-between;
-  width: 80vh;
-  height: 60vh;
-}
-#logo {
+.logo {
   cursor: pointer;
   /* width: auto;
   height: auto; */

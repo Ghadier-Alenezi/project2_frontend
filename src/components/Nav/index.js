@@ -6,12 +6,12 @@ import "./style.css";
 const Nav = () => {
   let navigate = useNavigate();
 
-  const toRegister = () => {
-    navigate("/register");
+  const toProfile = () => {
+    navigate("/profile");
   };
 
-  const toLogin = () => {
-    navigate("/login");
+  const toSignOut = () => {
+    navigate("/");
   };
 
   return (
@@ -19,12 +19,12 @@ const Nav = () => {
       <div className="linksBar">
         <ul>
           <li>
-            <Link className="text-link" to="/">
+            <Link className="text-link" to="/home">
               Home
             </Link>
           </li>
           <li>
-            <Link className="text-link" to="/lesson">
+            <Link className="text-link" to="/lessons">
               Learn
             </Link>
           </li>
@@ -36,11 +36,11 @@ const Nav = () => {
         </ul>
       </div>
       <div className="userBox">
-        <button className="loginBtn" onClick={toLogin}>
-          Log In
+        <button onClick={toProfile}>
+         Profile
         </button>
-        <button className="signBtn" onClick={toRegister}>
-          Register
+        <button onClick={toSignOut}>
+          Sign Out
         </button>
       </div>
     </div>

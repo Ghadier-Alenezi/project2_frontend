@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 // import Swal from 'sweetalert2/dist/sweetalert2.js';
 // import 'sweetalert2/src/sweetalert2.scss';
+const BASE_URL = "http://localhost:4000";
 
 const User = () => {
   const [formName, setFormName] = useState("");
@@ -25,14 +26,14 @@ const User = () => {
     };
     try {
       const res = await axios.post(
-        `http://localhost:4000/user/newUser`,
+        `${BASE_URL}/user/newUser`,
         signUpData
       );
       // .then((res) => console.log(res.data.message));
       if (res.data.message === "registerd successfully") {
         localStorage.setItem("user", JSON.stringify({ user: res.data.user }));
         setMessage("registerd successfully");
-        navigate('/home')
+        navigate('/')
       }
     } catch (error) {
       console.log(error);
@@ -42,7 +43,7 @@ const User = () => {
   return (
     <>
       <div className="auth-form">
-        <h3>Join Us</h3>
+        <p>Join Us</p>
         <div className="inputs">
           <form onSubmit={signUp}>
             <label htmlFor="form-name">Name</label>
@@ -85,10 +86,10 @@ const User = () => {
           </form>
         </div>
 
-        <h3>
+        <p>
           already have an account?
           <Link to="/login">Login</Link>
-        </h3>
+        </p>
       </div>
     </>
   );

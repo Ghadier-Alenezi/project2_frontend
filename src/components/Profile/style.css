@@ -1,4 +1,4 @@
-.container{
+.container {
   background-image: url(https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
 }
 .card {
@@ -10,17 +10,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  justify-content: center;
+  text-align: center;
   transform: translateX(-50%) translateY(-50%);
   padding: 10px;
-  box-shadow: 1px 8px 38px 4px rgba(153,153,153,0.75);
-  -webkit-box-shadow: 1px 8px 38px 4px rgba(153,153,153,0.75);
-  -moz-box-shadow: 1px 8px 38px 4px rgba(153,153,153,0.75);
+  box-shadow: 1px 8px 38px 4px rgba(153, 153, 153, 0.75);
+  -webkit-box-shadow: 1px 8px 38px 4px rgba(153, 153, 153, 0.75);
+  -moz-box-shadow: 1px 8px 38px 4px rgba(153, 153, 153, 0.75);
 }
 .img-radius {
   border-radius: 50%;
 }
-p {
+.profileP {
   margin: 0.5rem;
   font-size: 20px;
   font-weight: bold;
+  color: rgb(83, 83, 83);
 }

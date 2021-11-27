@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import YouTube from "react-youtube";
 import { HiArrowCircleLeft } from "react-icons/hi";
 import "./style.css";
 
 const Songs = () => {
-  const [vidPlay, setvidPlay] = useState(false);
   const songs = ["D0Ajq682yrA", "N8yuyekP_So", "YnBfug6nnW0"];
   function videoPlay(e) {
     e.target.playVideo();
@@ -12,9 +11,6 @@ const Songs = () => {
   const opts = {
     height: "650px",
     width: "500px",
-    playerVars: {
-      autoplay: 1,
-    },
   };
 
   const closeVid = () => {

@@ -1,12 +1,36 @@
-import React from 'react';
-import Profile from '../Profile';
+import React from "react";
+import Nav from "../Nav";
+import Logo from "../Home/logoLearn.jpeg";
+import { useNavigate } from "react-router";
+import Footer from "../Footer";
 
 const Home = () => {
-    return (
-        <div>
-            {/* <Profile /> */}
-        </div>
-    )
-}
+  const navigate = useNavigate();
 
-export default Home
+  const toHome = () => {
+    navigate("/");
+  };
+  return (
+    <div className="mainBody">
+      <div className="logo">
+        {" "}
+        <img src={Logo} width="170" alt="logo" onClick={toHome} />
+      </div>
+      <Nav className="footer" />
+      {/* <div>
+        <div className="circleCard">
+          <p>Lessons</p>
+        </div>
+        <div className="circleCard">
+          <p>Songs</p>
+        </div>
+        <div className="circleCard">
+          <p>Jokes</p>
+        </div>
+      </div> */}
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;

@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../LandingPage/logoLearn.jpeg";
 import { useNavigate } from "react-router";
-
+import Login from "../auth/Login";
 import "./style.css";
 
 const LandingPage = () => {
@@ -13,7 +13,13 @@ const LandingPage = () => {
   return (
     <>
       <div className="wrapper">
-      <img id="logo" src={Logo} width="80" alt="logo" onClick={toHome} />
+        <div className="logo">
+          {" "}
+          <img src={Logo} width="200" alt="logo" onClick={toHome} />
+        </div>
+      </div>
+      <div className="login">
+        <Login />
       </div>
     </>
   );

@@ -21,6 +21,7 @@ const Lesson = () => {
       }
     }
     setPostsToShow(arrayForHoldingPosts);
+    console.log(postsToShow);
   };
   // load the first set of posts when the page loads
   // and then set the value of count to 2
@@ -33,10 +34,11 @@ const Lesson = () => {
     setCount((prevCount) => prevCount + 1);
     loopThroughPosts(count);
   };
+  
   return (
     <div>
       <Posts postsToRender={postsToShow} />
-      <h3></h3>
+      <h3>{postsToShow}</h3>
       <button onClick={handleShowMorePosts}>Load more</button>
     </div>
   );

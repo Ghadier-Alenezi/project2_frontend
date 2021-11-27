@@ -68,3 +68,6 @@ button:hover {
 .signBtn {
   border: solid 1px white;
 }
+.navbar, li:hover {
+  color: #ff6948;
+}

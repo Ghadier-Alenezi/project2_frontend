@@ -8,7 +8,6 @@ import Profile from "./components/Profile";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Home from "./components/Home";
-import Jokes from "./components/Jokes";
 import  Update  from "./components/Update";
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
         <Route exact path="/lessons" element={<Lessons />} />
         <Route exact path="/lesson" element={<Lesson />} />
         <Route exact path="/songs" element={<Songs />} />
-        <Route exact path="/jokes" element={<Jokes />} />
       </Routes>
     </>
   );

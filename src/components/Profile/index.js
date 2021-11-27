@@ -10,11 +10,6 @@ import "./style.css";
 const Profile = () => {
   // to update profile
   const navigate = useNavigate();
-
-  const [name, setname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [age, setAge] = useState("");
   const [user, setUser] = useState(() => {
     // getting stored value
     const saved = localStorage.getItem("user");
@@ -36,11 +31,11 @@ const toUpdate = ()=>{
         />
 
         <div className="infoCard">
-          <h3>Your Name is:</h3>
-          <p>{user.user.name}</p>
+          <p className="profileP">Your Name is:</p>
+          <p className="profileP">{user.user.name}</p>
           <hr></hr>
-          <h3>Your Email is:</h3>
-          <p>{user.user.email}</p>
+          <p className="profileP">Your Email is:</p>
+          <p className="profileP">{user.user.email}</p>
           <div className="socialMlogo">
             <h2 className="social">
               <TiSocialTwitter />
