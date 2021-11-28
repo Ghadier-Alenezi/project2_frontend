@@ -21,11 +21,12 @@ const Lesson = () => {
   return (
     <>
       <Nav />
-      <div className="lessonsP">
-        <div className="logo">
+      <div className="logo">
           <img src={Logo} width="150" alt="logo" />
-        </div>
-        <div className="snippet">
+        </div >
+      <div className="lessonsP">
+        
+        <div  className="snippet">
           {lessons.map((item, i) => (
             // console.log(item.lesson,"here")
             <img

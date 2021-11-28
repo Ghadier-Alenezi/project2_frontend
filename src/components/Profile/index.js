@@ -5,6 +5,9 @@ import {
   TiSocialFacebook,
 } from "react-icons/ti";
 import { useNavigate } from "react-router";
+import Nav from "../Nav"
+import Footer  from "../Footer";
+import Logo from "../Home/logoLearn.jpeg";
 import "./style.css";
 
 const Profile = () => {
@@ -22,6 +25,8 @@ const toUpdate = ()=>{
 }
   return (
     <div className="container">
+      <Logo />
+      <Nav />
       <div className="card">
         <img
           src={user.user.img}
@@ -50,6 +55,7 @@ const toUpdate = ()=>{
         </div>
         <button onClick={toUpdate}>Update</button>
       </div>
+      <Footer />
     </div>
   );
 };
