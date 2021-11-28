@@ -1,5 +1,5 @@
 # project2
-## fron-end
+## front-end
 * [Trello](https://trello.com/b/KBjdx3N3/project2)
 ---
 # Motivation:
@@ -9,10 +9,7 @@ This project build to be a front-end for learning website.
 ## Build Status:
 
 > Working
----
 
-## Code style:
-JavaScript basic style
 ---
 ## Screenshots:
 ![](https://i.pinimg.com/564x/61/09/8c/61098c90e4c1ad4bdccc89265e622834.jpg)
